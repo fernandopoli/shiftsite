@@ -1,0 +1,922 @@
+/* VARIABLES */
+$textColorGray: #e2eae8;
+$textColorDefault: #6b7c92;
+$textColorBlue: #234aa1;
+$textColorGreen: #4ec09f;
+$textColorBlueLight: #47a3e2;
+$textColorOrange: #f26c4f;
+$textColorPurple: #1f57d1;
+$linkLineColorBlue: #6b7c92;
+$linkLineColorGreen: #43b693;
+$linkLineColorOrange: #f26c4f;
+$btnColorBlue: #6b7c92;
+$btnColorBlueLight: #47a3e2;
+$btnColorGreen: #4ec09f;
+$btnColorOrange: #f26c4f;
+$btnColorWhite: #fff;
+$btnColorBlueDark: #17196e;
+$btnColorGrayLight: #c5c3c9;
+$btnColorGreenLight: #35c49a;
+$inputBlueColor: #abc7eb;
+$inputGreenColor: #4ec09f;
+$inputGrayBgColor: #e1e1e1;
+$inputGrayColor: #9b9999;
+
+/* CUSTOM FONTS */
+
+@font-face {
+  font-family: 'Bolton';
+  src: url("../fonts/F37Bolton/F37Bolton-BoldItalic.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-BoldItalic.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-BoldItalic.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-BoldItalic.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-BoldItalic.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-BoldItalic.svg#F37Bolton-BoldItalic") format("svg");
+  font-style: italic;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Bolton";
+  src: url("../fonts/F37Bolton/F37Bolton-ThinItalic.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-ThinItalic.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-ThinItalic.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-ThinItalic.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-ThinItalic.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-ThinItalic.svg#F37Bolton-ThinItalic") format("svg");
+  font-style: italic;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Bolton";
+  src: url("../fonts/F37Bolton/F37Bolton-LightItalic.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-LightItalic.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-LightItalic.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-LightItalic.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-LightItalic.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-LightItalic.svg#F37Bolton-LightItalic") format("svg"); 
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Bolton";
+  src: url("../fonts/F37Bolton/F37Bolton-Italic.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-Italic.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-Italic.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-Italic.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-Italic.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-Italic.svg#F37Bolton-Italic") format("svg");
+  font-style: italic;
+  font-weight: normal;  
+}
+
+@font-face {
+  font-family: "Bolton";
+  src: url("../fonts/F37Bolton/F37Bolton-Thin.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-Thin.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-Thin.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-Thin.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-Thin.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-Thin.svg#F37Bolton-Thin") format("svg");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Bolton";
+  src: url("../fonts/F37Bolton/F37Bolton-Regular.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-Regular.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-Regular.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-Regular.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-Regular.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-Regular.svg#F37Bolton-Regular") format("svg");
+  font-style: normal;
+  font-weight: 400;
+
+}
+
+@font-face {
+  font-family: "Bolton";
+  src: url("../fonts/F37Bolton/F37Bolton-Light.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-Light.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-Light.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-Light.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-Light.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-Light.svg#F37Bolton-Light") format("svg");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Bolton";
+  src: url("../fonts/F37Bolton/F37Bolton-Bold.eot");
+  src: url("../fonts/F37Bolton/F37Bolton-Bold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/F37Bolton/F37Bolton-Bold.woff2") format("woff2"),
+  url("../fonts/F37Bolton/F37Bolton-Bold.woff") format("woff"),
+  url("../fonts/F37Bolton/F37Bolton-Bold.ttf") format("truetype"),
+  url("../fonts/F37Bolton/F37Bolton-Bold.svg#F37Bolton-Bold") format("svg");
+  font-style: normal;
+  font-weight: 900;
+}
+
+
+/* GENERAL STYLES */
+// ----------------------------------------------------------------------------
+body{
+  @include fontBolton(14px, 400);
+  line-height: 22px;
+  // MD, XL and LG Screen
+  @media ( max-width: 992px ){
+    .container{
+      max-width: 100%;
+    }
+  }
+  // MD, XL and LG Screen
+  @media ( min-width: 992px ){
+    @include fontBolton(16px, 400);
+    line-height : 32px;
+  }
+
+  // PARAGRAPH SETTING
+  p{
+    @include fontBolton(14px, 400);
+    line-height: 22px;
+
+    &.text-highlight{
+      font-size: 16px;
+    }
+    &.text-big{
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &.text-lg{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    small{
+      font-size: 13px;
+      line-height: 17px;
+    }
+
+    @media ( min-width: 992px ){
+      @include fontBolton(16px, 400);
+      line-height : 32px;
+      &.text-highlight{
+        font-size: 24px;
+      }
+      &.text-big{
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 40px;
+      }
+      &.text-lg{
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .wrapper{
+    @include box-shadow-out(0px, 0px, 20px, 0px, 0.55);
+    position: relative;
+    overflow-x: hidden; 
+    height: 100%;
+    >section{
+      position: relative;
+      &.section-initial{
+        padding-top: 118px;
+        // MD, XL and LG Screen
+        @media ( min-width: 992px ){
+         padding-top: 184px;
+       }
+     }
+   }
+ }
+}
+
+
+/* TITLES */
+// ----------------------------------------------------------------------------
+h1{
+  @include fontBolton(21.6px,400);
+  line-height : 24px;
+}
+h2{
+  @include fontBolton(14.4px,400);
+  line-height : 22px;
+}
+h3{
+  @include fontBolton(14.36px,900);
+  line-height : 17.95px;
+}
+h4{
+  @include fontBolton(20px,400);
+  line-height : 30px;
+}
+h5{
+  @include fontBolton(14px,400);
+  line-height : 30px;
+}
+h6{
+  @include fontBolton(16px,400);
+  line-height : 26px;
+}
+
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  h1{
+    @include fontBolton(36px,400);
+    line-height : 44px;
+  }
+  h2{
+    @include fontBolton(24px,400);
+    line-height : 36px;
+  }
+  h3{
+    @include fontBolton(24px,900);
+    line-height : 34px;
+  }
+  h4{
+    @include fontBolton(20px,400);
+    line-height : 30px;
+  }
+  h5{
+    @include fontBolton(14px,400);
+    line-height : 30px;
+  }
+  h6{
+    @include fontBolton(16px,400);
+    line-height : 26px;
+  }
+}
+
+/* BUTTONS */
+// ----------------------------------------------------------------------------
+.btn{
+  padding: 8px 33px;
+  border-radius: 5px;
+  transform: translateY(0px);
+  @include box-shadow-out(0px, 3px, 13px, 0px, 0.4);
+  @include fontBolton(14.31px,900);
+  @include transition(all, 300ms ,ease);
+  &:hover,
+  &:focus{
+    @include transition(all, 300ms ,ease);
+  }
+  &.btn-link{
+    @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    &.btn-link-green{
+      color: $btnColorGreenLight;
+    }
+  }
+  &.btn-sm{
+    font-size: 9px;
+    font-weight: 500;
+    padding: 4px 12px;
+    @include box-shadow-out(0px, 3px, 7px, 0px, 0.3);
+    &.btn-link{
+      @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    }
+  }
+  &.btn-md{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 30px;
+    @include box-shadow-out(0px, 3px, 7px, 0px, 0.3);
+  }
+  &.btn-orange{
+    background-color: $btnColorOrange;
+    color: $btnColorWhite;
+    &:focus,
+    &:hover{
+      background-color: darken($btnColorOrange, 10%);
+    }
+  }
+  &.btn-green{
+    background-color: $btnColorGreen;
+    color: $btnColorWhite;
+    &:focus,
+    &:hover{
+      background-color: darken($btnColorGreen, 10%);
+    }
+  }
+  &.btn-blue{
+    background-color: $btnColorBlue;
+    color: $btnColorWhite;
+    &:focus,
+    &:hover{
+      background-color: darken($btnColorBlue, 10%);
+    }
+  }
+  &.btn-blue-light{
+    background-color: $btnColorBlueLight;
+    color: $btnColorWhite;
+    &:focus,
+    &:hover{
+      background-color: darken($btnColorBlueLight, 10%);
+    }
+  }
+  &.move-up{
+    &:hover,&:focus{
+      transform: translateY(-3px);
+      @include box-shadow-out(0px, 4px, 15px, 0px, 0.45);
+    }
+  }
+  &.btn-language{
+    padding-left: 5px!important;
+    padding-right: 5px!important;
+    color: $btnColorGrayLight;
+    &.active{
+      color: $btnColorBlueDark;
+    }
+  }
+  &.btn-contact{
+    padding-left: 0px;
+    padding-right: 0px;
+    svg{
+      font-size: 15px;
+      margin-left: 5px;
+    }
+  }
+  &.btn-send{
+    @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    border-radius: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    &:hover, &:focus{
+      @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    }
+  }
+}
+
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  .btn{
+    padding: 9px 55px;
+    font-size: 24px;
+    &.btn-sm{
+      font-size: 11.07px;
+      padding: 5px 10px;
+    }
+    &.btn-md{
+      font-size: 16.15px;
+      padding: 6px 50px;
+    }
+    &.btn-send{
+      font-size: 18px;
+    }
+  }
+}
+
+
+/* TEXT COLOR */
+// ----------------------------------------------------------------------------
+.text-gray{
+  color: $textColorGray;
+}
+.text-default{
+  color: $textColorDefault;
+}
+.text-blue{
+  color: $textColorBlue;
+}
+.text-blue-light{
+  color: $textColorBlueLight;
+}
+.text-green{
+  color: $textColorGreen;
+}
+.text-orange{
+  color: $textColorOrange;
+}
+.text-purple{
+  color: $textColorPurple;
+}
+.text-underline{
+  border-bottom: 1px solid;
+  padding-bottom: 8px;
+}
+
+
+/* TITLE HORIZONTAL */ 
+// ----------------------------------------------------------------------------
+.title-horizonal-wrapper{
+  .title-icon{
+    width: 39px;
+    height: 39px;
+  }
+  .title-horizontal{
+    margin: 0 0 10px 0;
+    h3{
+      margin: 0;
+    }
+  }
+  p{
+    margin-bottom: 1rem;
+    &.last{
+      margin-bottom: 1rem;
+    }
+  }
+  &.title-horizonal-right{
+    h3{
+      margin-right: 10px;
+    }
+  }
+  &.title-horizonal-left{
+    h3{
+      margin-left: 10px;
+    }    
+  }
+} 
+.title-vertical-wrapper{
+  .title-icon{
+    width: 39px;
+    height: 39px;
+    &.title-icon-big{
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .title-vertical{
+    margin: 0 0 20px 0;
+    .title-img{
+      margin-bottom: 10px;
+    }
+    h3{
+      margin: 0px;
+    }
+  }
+  p{
+    margin-bottom: 1rem;
+    &.last{
+      margin-bottom: 1rem;
+    }
+  }
+} 
+
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  .title-horizonal-wrapper{
+    .title-icon{
+      width: 66px;
+      height: 66px;
+    }
+    .title-horizontal{
+      margin: 0 0 20px 0;
+    }
+    p{
+      margin-bottom: 40px;
+    }
+    &.title-horizonal-right{
+      h3{
+        margin-right: 15px;
+      }
+    }
+    &.title-horizonal-left{
+      h3{
+        margin-left: 15px;
+      }    
+    }
+  } 
+  .title-vertical-wrapper{
+    .title-icon{
+      width: 62px;
+      height: 62px;
+      &.title-icon-big{
+        width: 80px;
+        height: 80px;
+      }
+    }
+    .title-vertical{
+      margin: 0 0 30px 0;
+      .title-img{
+        margin-bottom: 20px;
+      }
+      h3{
+        margin: 0px;
+      }
+    }
+    p{
+      margin-bottom: 1rem;
+      &.last{
+        margin-bottom: 1rem;
+      }
+    }
+  } 
+}
+
+
+/* TITLE HORIZONTAL */ 
+// ----------------------------------------------------------------------------
+.link-line{
+  @include fontBolton(7.18px, 400);
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 8px;
+  @include transition(all, 300ms ,ease);
+  &:hover{
+    text-decoration: none;
+    @include transition(all, 300ms ,ease);
+    padding-top: 4px;
+  }
+  &.link-blue{
+    color: $linkLineColorBlue;
+    border-top-color: $linkLineColorBlue;
+    &:focus,
+    &:hover{
+      color: darken($linkLineColorBlue, 10%);
+      border-top-color: darken($linkLineColorBlue, 10%);
+    }
+  }
+  &.link-green{
+    color: $linkLineColorGreen;
+    border-top-color: $linkLineColorGreen;
+    &:focus,
+    &:hover{
+      color: darken($linkLineColorGreen, 10%);
+      border-top-color: darken($linkLineColorGreen, 10%);
+    }
+  }
+  &.link-orange{
+    color: $linkLineColorOrange;
+    border-top-color: $linkLineColorOrange;
+    &:focus,
+    &:hover{
+      color: darken($linkLineColorOrange, 10%);
+      border-top-color: darken($linkLineColorOrange, 10%);
+    }
+  }
+}
+
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  .link-line{
+    font-size: 12px;
+    padding-top: 14px;
+    &:hover,
+    &:focus{
+      padding-top: 7px;
+    }
+  }
+}
+
+
+/* FORM */ 
+// ----------------------------------------------------------------------------
+input{
+  &:focus{    
+    &::-webkit-input-placeholder {
+      opacity: 0;
+      @include transition(all, 300ms, ease);
+    }    
+  }
+}
+.input-group{
+  .form-control,
+  .btn{
+    border: none 0;
+    border-radius: 0;
+    @include fontBolton(14px, 400);
+  }
+  &.input-blue{
+    .form-control,
+    .btn{
+      background-color: $inputBlueColor;
+      color: $btnColorWhite;
+      padding: 9px 10px;
+      @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    }
+    .form-control{
+      @include placeholder-color($btnColorWhite);
+    }
+  }
+  &.input-green{
+    .form-control,
+    .btn{
+      background-color: $inputGreenColor;
+      color: $btnColorWhite;
+      padding: 9px 10px;
+      @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    }
+    .form-control{
+      @include placeholder-color($btnColorWhite);
+    }
+  }
+  &.input-gray{
+    .form-control,
+    .btn{
+      color: $btnColorWhite;
+      @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    }
+    .form-control{
+      padding: 8px 10px;
+      background-color: $inputGrayBgColor;
+    }
+    .btn{
+      padding: 8px 13px;
+      background-color: $inputGrayColor;
+    }
+    .form-control{
+      @include placeholder-color($inputGrayColor);
+    }
+  }
+}
+
+/* CARD DECK */
+// ----------------------------------------------------------------------------
+.card-deck{
+  .card{
+    background-color: $btnColorWhite;
+    box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    border: 0px none;
+    .card-body{
+      padding: 35px 35px 20px;  
+    }
+    .card-footer{
+      padding: 0px 35px 20px;  
+      border: 0px none;
+      background-color: transparent;
+      .link-line{
+        border-top-width: 1px;
+      }
+    }    
+  }
+}
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  .card-deck{
+    .card{
+      box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.2);
+      .card-body{
+        padding: 70px 70px 30px;  
+        &.card-big{
+          padding: 100px 120px 80px;
+        }
+      }
+      .card-footer{
+        padding: 0px 70px 30px;  
+        &.card-big{
+          padding: 0px 120px 50px;
+        }
+        .link-line{
+          border-top-width: 2px;
+        }
+      }    
+    }
+  }
+}
+
+/* PANEL */
+// ----------------------------------------------------------------------------
+.panel{
+  padding: 10px;
+  border-radius: 5px;
+  @include fontBolton(16px, 400);
+  transform: translateY(0px);
+  @include box-shadow-out(0px, 3px, 13px, 0px, 0.4);
+  @include transition(all, 300ms ,ease);
+  a{
+    color: $btnColorWhite;
+    position: relative;
+    display: inline-block;
+    &:after{
+      content: "";
+      height: 2px;
+      width: 0px;
+      background-color: $btnColorWhite;
+      @include transition(all, 300ms, ease);
+      display: block;
+    }
+    &:hover, &:focus{
+      text-decoration: none;
+      &:after{
+        width: 100%;
+        background-color: $btnColorWhite;
+      }
+    }
+  }
+  &:hover, &:focus{
+    transform: translateY(-5px);
+    @include box-shadow-out(0px, 5px, 15px, 0px, 0.5);
+  }
+  &.panel-blue{
+    color: $btnColorWhite;
+    background-color: $btnColorBlue;
+  }
+  &.panel-green{
+    color: $btnColorWhite;
+    background-color: $btnColorGreen;
+  }
+  &.panel-orange{
+    color: $btnColorWhite;
+    background-color: $btnColorOrange;
+  }
+}
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  .panel{
+    padding: 20px;
+    font-size: 20px;
+  }
+}
+
+/* LINK COLOR */
+// ----------------------------------------------------------------------------
+.link{
+  &:hover, &:focus{
+    text-decoration: none;
+  }
+  &.link-orange{
+    color: $btnColorOrange;
+    &:focus,
+    &:hover{
+      color: darken($btnColorOrange, 10%);
+    }
+  }
+  &.link-green{
+    color: $btnColorGreen;
+    &:focus,
+    &:hover{
+      color: darken($btnColorGreen, 10%);
+    }
+  }
+  &.link-default{
+    color: $textColorDefault;
+    &:focus,
+    &:hover{
+      color: darken($textColorDefault, 10%);
+    }
+  }
+  &.link-blue{
+    color: $textColorBlue;
+    &:focus,
+    &:hover{
+      color: darken($textColorBlue, 10%);
+    }
+  }
+  &.link-blue-light{
+    color: $btnColorBlueLight;
+    &:focus,
+    &:hover{
+      color: darken($btnColorBlueLight, 10%);
+    }
+  }
+}
+
+/* LINK COLOR */
+// ----------------------------------------------------------------------------
+form{
+  .form-control{
+    border: 0px none;
+    border-radius: 0;
+    @include fontBolton(14px,400);
+    color: $textColorDefault;
+    &:focus{
+      @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+    }
+  }
+  .form-group{
+    margin-bottom: 10px;
+  }
+  label{
+    font-size: 14px;
+  }
+}
+
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  form{
+    .form-control{
+      @include fontBolton(16px,400);
+    }
+    .form-group{
+      margin-bottom: 20px;
+    }
+    label{
+      font-size: 18px;
+    }
+  }
+}
+
+/* LIST */
+// ----------------------------------------------------------------------------
+.list-wrapper{
+  .list{
+    margin-bottom: 20px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    padding-top: 10px;
+    small{
+      line-height: 100%;
+    } 
+    h5{
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 0px;
+    }
+    p{
+      font-size: 13px;
+      line-height: 18px;
+    }
+    &.list-blue{
+      border-top-color: $textColorBlue;
+    }
+    &.list-green{
+      border-top-color: $textColorGreen;
+    }
+    &.list-orange{
+      border-top-color: $textColorOrange;
+    }
+  }
+}
+// MD, XL and LG Screen
+@media ( min-width: 992px ){
+  .list-wrapper{
+    .list{
+      margin-bottom: 40px;
+    }
+  }
+}
+
+/* ANIMATION */
+// ----------------------------------------------------------------------------
+
+// WAVE
+// ----
+@keyframes waveUp{
+  0% {
+    opacity:0.5;
+    transform:  scaleX(1.00) scaleY(1.00) ;
+  }
+  100% {
+    opacity:0;
+    transform:  scaleX(2.00) scaleY(2.00) ;
+  }
+}
+
+.wave-icon{
+  position: relative;
+  &:after{
+    content: "";
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: waveUp linear 1.5s infinite;
+    z-index: -1;
+  }
+  &.wave-blue{
+    &:after{
+      background-color: $textColorBlue;
+    }
+  }
+  &.wave-orange{
+    &:after{
+      background-color: $textColorOrange;
+    }
+  }
+  &.wave-green{
+    &:after{
+      background-color: $textColorGreen;
+    }
+  }
+}
+
+// Bounce
+// ------
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+ 40% {-webkit-transform: translateY(-30px);}
+ 60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 40% {-moz-transform: translateY(-30px);}
+ 60% {-moz-transform: translateY(-15px);}
+}
+ 
+@-o-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+ 40% {-o-transform: translateY(-30px);}
+ 60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+ 40% {transform: translateY(-30px);}
+ 60% {transform: translateY(-15px);}
+}
+
+.bounce{
+  animation: bounce 2s infinite;
+ -webkit-animation: bounce 2s infinite;
+ -moz-animation: bounce 2s infinite;
+ -o-animation: bounce 2s infinite;
+}

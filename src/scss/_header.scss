@@ -1,0 +1,223 @@
+/* HEADER */
+
+/* VARIABLES */
+$headerBgColor: #fff;
+$headerMobileBgColor: #e0e1e2;
+$headerIconBarInactive: #000;
+$headerIconBarActive: #50c1af;
+$headerNavBarLinksInactive: #fff;
+$headerNavBarLinksActive: #17196e;
+$headerNavBarLinksOn: #35c49a;
+
+
+.header {
+  padding: 20px 0px 14px;
+  background-color: transparent;
+  @include transition(all, 300ms, ease);
+  #loginWrapper{
+    a{
+      &:hover, &:focus{
+        text-decoration: none;
+      }
+    }
+  }
+  #naBarLinks{
+    li{
+      margin-top: 8px; 
+    }
+    a{
+      color: $headerNavBarLinksInactive;
+      @include fontBolton(16px, 400);
+      @include transition(all, 300ms, ease);
+      &:hover, &:focus, &.active{
+        text-decoration: none;
+        color: $headerNavBarLinksOn;        
+      }
+    }
+  }
+  .navbar-brand{
+    margin-right: 58px;
+    padding: 0px;
+  }
+  #logo{
+    *{
+      @include transition(all, 300ms, ease);
+      fill: $headerBgColor;
+    }
+  }
+  &.active-header{
+    background-color: $headerBgColor; 
+    @include transition(all, 300ms, ease);
+    #naBarLinks{
+      a{
+        color: $headerNavBarLinksActive;
+        &:hover, &:focus, &.active{
+          color: $headerNavBarLinksOn;        
+        }
+      }
+    }
+    #logo{
+      *{
+        @include transition(all, 300ms, ease);
+      }
+      #logoIso, #logoTextI{
+        fill: #38ccb5;
+      }
+      #logoText{
+        fill: #030140;
+      }
+    }
+  }
+
+  // NAV LINKS
+}
+
+
+
+// MOBILE
+.navbar-toggle{
+  margin-right: 15px;
+  width: 30px;
+  height: 20px;
+  padding: 0px;
+  border: 0 none;
+  background: transparent;
+  position: relative;
+  &:hover, &:focus{
+    outline: 0px none;
+    background: transparent;
+  }
+  .icon-bar{    
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background-color: $headerIconBarActive;
+    opacity: 1;
+    margin: 0px;                  
+    @include transition(all, 200ms, ease);
+    +.icon-bar{
+      margin-top: 0px;    
+    }
+    &:nth-child(1){
+      left: 2px;
+      top: 3px;
+    }
+    &:nth-child(2){
+      left: calc(50% - 2px);
+      top: 3px;
+    }
+    &:nth-child(1),
+    &:nth-child(6){
+      @include rotate(45deg);
+    }
+    &:nth-child(2),
+    &:nth-child(5){
+      @include rotate(-45deg);
+    }
+    &:nth-child(3){
+      left: -50%;
+      opacity: 0;
+    }
+    &:nth-child(4){
+      left: 100%;
+      opacity: 0;
+    }
+    &:nth-child(5){
+      left: 2px;
+      top: 14px;
+    }
+    &:nth-child(6){
+      left: calc(50% - 2px);
+      top: 14px;
+    }
+  }
+  &.collapsed{
+    .icon-bar{
+      background-color: $headerIconBarInactive;                        
+      &:nth-child(1),
+      &:nth-child(2){
+        top: 0px;
+        @include rotate(0deg);
+      }
+      &:nth-child(3),
+      &:nth-child(4){
+        top: 8px;
+        @include rotate(0deg);
+        opacity: 1;
+      }
+      &:nth-child(5),
+      &:nth-child(6){
+        top: 16px;
+        @include rotate(0deg);
+      }
+      &:nth-child(odd){
+        left: 0px;
+        border-radius: 9px 0 0 9px;
+      }
+      &:nth-child(even){
+        left: 50%;
+        border-radius: 0 9px 9px 0;
+      }
+    }
+  }
+}
+
+// XS, SM
+@media ( max-width: 992px ){
+  .header {
+    padding: 14px 0;
+    background-color: $headerMobileBgColor;
+    .navbar-brand{
+      padding: 0px;
+    }
+    #naBarLinks{
+      padding: 30px 20px 10px 65px;
+      li{
+        margin-top: 10px; 
+      }
+      a{
+        color: $headerNavBarLinksActive;
+        @include fontBolton(18px, 400);
+        text-transform: uppercase;        
+      }
+    }
+    #loginWrapper{
+      padding: 5px 20px 20px 70px;
+      .btn{
+        @include box-shadow-out(0px, 0px, 0px, 0px, 0);
+        background-color: transparent;
+        color: $btnColorGreen;
+        font-size: 14px;
+        padding: 0px;
+        margin: 0 0 5px;
+      }
+    }
+    #logo{
+      margin-left: 15px;
+      #logoIso, #logoTextI{
+        fill: #38ccb5;
+      }
+      #logoText{
+        fill: #030140;
+      }
+    }
+    &.active-header{
+      background-color: $headerMobileBgColor;
+      #logo{
+        #logoIso, #logoTextI{
+          fill: #38ccb5;
+        }
+        #logoText{
+          fill: #030140;
+        }
+      }
+    }
+    .navbar-collapse{
+      background-color: $headerBgColor;
+      padding-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: -14px;
+    }
+  }
+}

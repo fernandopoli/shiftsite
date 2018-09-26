@@ -1,0 +1,30 @@
+/* SLIDER GENERAL */
+.carousel{
+  position: relative;
+  z-index: 6
+  height: 700px;
+  // Slider Indicator
+  .carousel-indicators{
+    li{
+      width: 16px;
+      height: 5px;
+      background-color: $btnColorWhite;
+      &.active{
+        background-color: #btnColorBlue;
+      }
+    }
+  }
+  // Slider Inner
+
+  
+}
+
+
+// XS, SM
+@media ( min-width: 992px ){
+}
+
+// MD
+@media ( min-width: 640px) and (max-width: 991px){
+
+}

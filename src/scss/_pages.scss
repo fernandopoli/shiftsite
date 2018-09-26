@@ -1,0 +1,51 @@
+/* BACKGROUND IMAGES GENERAL */
+
+.mask-wrapper{  
+  position: relative;
+  &.mask-top-right,
+  &.mask-bottom-right{
+    &:before{
+      content: '';
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      z-index: 5;
+    }
+  }
+  &.mask-top-right{
+    &:before{
+      top: 0px;
+      left: 0px;
+      background-image: url(../image/mask_right_top.svg);
+    }
+  }
+  &.mask-bottom-right{
+    &:before{
+      bottom: 0px;
+      left: 0px;
+      background-image: url(../image/mask_right_bottom.svg);
+    }
+  }
+}
+
+.bg-gray{
+  background-color: $bgGray;
+}
+
+// XS, SM
+@media ( min-width: 992px ){
+}
+
+// MD
+@media ( min-width: 640px) and (max-width: 991px){
+
+}
+
+
+// HOME PAGE
+// -------------------------------------------------------------
+
+// LG, XL
+@media ( min-width: 992px ){
+}
